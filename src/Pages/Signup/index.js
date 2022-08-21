@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import api from "../../services/api";
 
 export default function Signup() {
@@ -22,7 +22,7 @@ export default function Signup() {
     if (!form.name || !form.email || !form.password) return
 
     try {
-      const res = await api.post('/signup', {
+      await api.post('/signup', {
         name: form.name,
         email: form.email,
         password: form.password

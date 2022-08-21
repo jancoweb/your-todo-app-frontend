@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, Navigate, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import api from '../../services/api';
 import { getLocalItem, setLocalItem } from "../../services/functions";
 import './styles.css'
@@ -41,7 +41,7 @@ function Login() {
     if (token) {
       navigate('/main')
     }
-  }, [])
+  })
 
   return (
     <>

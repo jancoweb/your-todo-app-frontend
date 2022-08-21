@@ -22,7 +22,7 @@ export default function Main() {
 
     if (!form.title) return
 
-    const res = await api.post('/task', {
+    await api.post('/task', {
       title: form.title
     }, {
       headers: {
