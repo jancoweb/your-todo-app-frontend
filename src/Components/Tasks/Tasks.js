@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import api from "../../services/api";
 import { getLocalItem } from "../../services/functions";
 
@@ -7,7 +7,7 @@ const Task = ({ tasks }) => {
   async function handleDelete(id) {
     try {
       const token = getLocalItem('token')
-      const res = await api.delete(`/task/${id}`,
+      await api.delete(`/task/${id}`,
         {
           headers: {
             authorization: `Bearer ${token}`
