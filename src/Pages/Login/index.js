@@ -47,7 +47,10 @@ function Login() {
     <>
       <div className="app_wrapper">
         <div className="login content_wrapper">
-          <h1>Faça seu login</h1>
+          <h1>You To-Do App</h1>
+          <p>Lista de tarefas Online</p>
+          <br></br>
+          <h3>Faça seu login</h3>
           <div className="login_input_container">
             <form id='login_form' onSubmit={handleLogin}>
               <div className="input_container">
