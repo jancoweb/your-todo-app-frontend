@@ -5,7 +5,7 @@ import Task from "./Tasks";
 import api from '../../services/api';
 import { getLocalItem } from "../../services/functions";
 
-const TaskList = () => {
+function TaskList() {
 
   const [tasks, setTasks] = useState([]);
   const [current, setCurrent] = useState(1);
@@ -32,7 +32,7 @@ const TaskList = () => {
 
   useEffect(() => {
     listTasks()
-  }, [])
+  }, [tasks])
 
 
   return (

@@ -27,7 +27,7 @@
   margin-bottom: 20px;
 }
 
-.input_container {
+.input_container form#addTask {
   display: flex;
   gap: 10px;
 }
