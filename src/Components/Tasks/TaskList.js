@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Pagination from "../Pagination/Pagination";
 import './styles.css'
 import Task from "./Tasks";
+import api from '../../services/api';
+import { getLocalItem } from "../../services/functions";
 
 const TaskList = () => {
-  const axios = ''
 
-  const [tasks, setTasks] = useState([{ id: 1, content: 'Estudar React.js', done: false }, { id: 13, content: 'Estudar React.js', done: true }, { id: 12, content: 'Estud1ar React.js', done: true }, { id: 134, content: 'Estudar React.js', done: true }, { id: 1555, content: 'Estud222ar React.js', done: true }, { id: 15, content: 'Estudar Reac44t.js', done: true }, { id: 17, content: 'Estudar Reaceeeet.js', done: false }, { id: 155, content: 'Estu2323dar React.js', done: true }, { id: 132, content: 'Estudar React.js', done: true }, { id: 15, content: 'Estudar React.js', done: true }, { id: 61, content: 'eeee React.js', done: true }, { id: 21, content: 'Estudddddar React.js', done: false }]);
-
+  const [tasks, setTasks] = useState([]);
   const [current, setCurrent] = useState(1);
   const [taskPerPage] = useState(6);
 
@@ -17,11 +17,22 @@ const TaskList = () => {
   const indexFirstTask = indexLastTask - taskPerPage;
   const currentTasks = tasks.slice(indexFirstTask, indexLastTask);
 
-  useEffect(() => {
-    const getTasks = async () => {
-      const res = await axios.get('http://localhost:3000/tasks');
+  async function listTasks() {
+    try {
+      const token = getLocalItem('token');
+      const res = await api.get('/task', {
+        headers: {
+          authorization: `Bearer ${token}`
+        }
+      });
       setTasks(res.data)
+    } catch (error) {
+
     }
+  }
+
+  useEffect(() => {
+    listTasks()
   }, [])
 
 
