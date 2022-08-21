@@ -58,6 +58,7 @@ export default function Signup() {
           </div>
         </div>
       </div>
+      <p>@jancoweb</p>
     </div>
   )
 }
