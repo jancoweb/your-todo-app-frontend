@@ -47,7 +47,7 @@ function Login() {
     <>
       <div className="app_wrapper">
         <div className="login content_wrapper">
-          <h1>You To-Do App</h1>
+          <h1>Your To-Do App</h1>
           <p>Lista de tarefas Online</p>
           <br></br>
           <h3>Faça seu login</h3>
