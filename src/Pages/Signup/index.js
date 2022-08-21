@@ -44,13 +44,13 @@ export default function Signup() {
           <div className="login_input_container">
             <form id="login_form" onSubmit={handleSignUp}>
               <div className="input_container">
-                <input type='text' placeholder="Digite seu nome" name="name" value={form.name} onChange={(e) => changeValue(e.target)} />
+                <input type='text' placeholder="Digite seu nome" name="name" required value={form.name} onChange={(e) => changeValue(e.target)} />
               </div>
               <div className="input_container">
-                <input type='email' placeholder="Digite seu email" name="email" value={form.email} onChange={(e) => changeValue(e.target)} />
+                <input type='email' placeholder="Digite seu email" name="email" required value={form.email} onChange={(e) => changeValue(e.target)} />
               </div>
               <div className="input_container">
-                <input type='password' placeholder="Digite sua senha" name="password" value={form.password} onChange={(e) => changeValue(e.target)} />
+                <input type='password' placeholder="Digite sua senha" name="password" required value={form.password} onChange={(e) => changeValue(e.target)} />
               </div>
               <button type='submit' className="signupBtn">Cadastre-se</button>
               <Link to={'/'}><button className="back">Voltar</button></Link>
