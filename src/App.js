@@ -1,25 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import TaskList from './Components/Tasks/TaskList'
 
-function App() {
+
+export default function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <div className='app_wrapper'>
+        <div className='content_wrapper'>
+          <div className='logout'>
+            <p>Username</p>
+            <button className='logout'>Logout</button>
+          </div>
+          <div className='title_container'>
+            <h1>Lista de tarefas</h1>
+            <p className='task_counter'>Você completou de tarefas</p>
+          </div>
+          <div className='input_container'>
+            <input type='text' placeholder='O que planeja fazer hoje?' />
+            <button className='add'>Adicionar tarefa</button>
+          </div>
+          <TaskList />
+        </div>
+      </div>
+    </>
+  )
 }
-
-export default App;

@@ -1,0 +1,15 @@
+.page-list {
+  list-style-type: none;
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.page-list-item button {
+  background-color: #9677EF;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
