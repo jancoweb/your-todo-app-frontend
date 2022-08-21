@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import api from "../../services/api";
 
 export default function Signup() {
@@ -53,6 +53,7 @@ export default function Signup() {
                 <input type='password' placeholder="Digite sua senha" name="password" value={form.password} onChange={(e) => changeValue(e.target)} />
               </div>
               <button type='submit' className="signupBtn">Cadastre-se</button>
+              <Link to={'/'}><button className="back">Voltar</button></Link>
             </form>
           </div>
         </div>

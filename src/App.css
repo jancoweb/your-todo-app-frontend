@@ -121,6 +121,14 @@ button.add {
   box-shadow: 1px 0px 8px #9677EF;
 }
 
+button.back {
+  border-radius: 5px;
+  background-color: #1F2937;
+  border: none;
+  padding: 10px;
+  color: #fff;
+}
+
 .logout {
   margin-left: auto;
   display: flex;
