@@ -10,7 +10,6 @@ const TaskList = () => {
   const [tasks, setTasks] = useState([]);
   const [current, setCurrent] = useState(1);
   const [taskPerPage] = useState(6);
-
   const paginate = (pageNumber) => setCurrent(pageNumber)
 
   const indexLastTask = current * taskPerPage;

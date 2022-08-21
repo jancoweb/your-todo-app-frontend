@@ -1,7 +1,6 @@
 import React from "react";
 
 const Task = ({ tasks }) => {
-
   return <ul>
     {
       tasks.map((task) => {
