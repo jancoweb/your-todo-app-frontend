@@ -16,23 +16,23 @@ function TaskList() {
   const indexFirstTask = indexLastTask - taskPerPage;
   const currentTasks = tasks.slice(indexFirstTask, indexLastTask);
 
-  async function listTasks() {
-    try {
-      const token = getLocalItem('token');
-      const res = await api.get('/task', {
-        headers: {
-          authorization: `Bearer ${token}`
-        }
-      });
-      setTasks(res.data)
-    } catch (error) {
-
-    }
-  }
 
   useEffect(() => {
+    async function listTasks() {
+      try {
+        const token = getLocalItem('token');
+        const res = await api.get('/task', {
+          headers: {
+            authorization: `Bearer ${token}`
+          }
+        });
+        setTasks(res.data)
+      } catch (error) {
+
+      }
+    }
     listTasks()
-  })
+  }, [])
 
 
   return (
