@@ -32,7 +32,7 @@ function TaskList() {
 
   useEffect(() => {
     listTasks()
-  }, [tasks])
+  })
 
 
   return (
