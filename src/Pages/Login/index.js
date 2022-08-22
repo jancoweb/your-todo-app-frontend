@@ -41,7 +41,7 @@ function Login() {
     if (token) {
       navigate('/main')
     }
-  })
+  }, [email])
 
   return (
     <>
