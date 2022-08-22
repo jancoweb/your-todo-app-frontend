@@ -2,7 +2,7 @@ import React from "react";
 import api from "../../services/api";
 import { getLocalItem } from "../../services/functions";
 
-const Task = ({ tasks }) => {
+const Task = ({ tasks, setUpdate }) => {
 
   async function handleDelete(id) {
     try {
@@ -14,6 +14,7 @@ const Task = ({ tasks }) => {
           }
         }
       )
+      setUpdate(true)
     } catch (error) {
 
     }

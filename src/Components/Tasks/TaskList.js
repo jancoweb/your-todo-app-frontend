@@ -5,7 +5,7 @@ import Task from "./Tasks";
 import api from '../../services/api';
 import { getLocalItem } from "../../services/functions";
 
-function TaskList() {
+function TaskList({ update, setUpdate }) {
 
   const [tasks, setTasks] = useState([]);
   const [current, setCurrent] = useState(1);
@@ -32,12 +32,13 @@ function TaskList() {
       }
     }
     listTasks()
-  }, [])
+    setUpdate(false)
+  }, [update, setUpdate])
 
 
   return (
     <div className="list_container">
-      <Task tasks={currentTasks} />
+      <Task tasks={currentTasks} update={update} setUpdate={setUpdate} />
       <Pagination taskPerPage={taskPerPage} totalTasks={tasks.length} paginate={paginate} />
     </div>
   )

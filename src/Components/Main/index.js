@@ -6,6 +6,7 @@ import api from "../../services/api";
 
 export default function Main() {
 
+  const [update, setUpdate] = useState(false);
   const navigate = useNavigate();
   const [form, setForm] = useState({
     title: ''
@@ -31,6 +32,7 @@ export default function Main() {
     }
     )
     setForm({ title: '' });
+    setUpdate(true)
   }
 
   function changeValue(e) {
@@ -56,7 +58,7 @@ export default function Main() {
             </form>
 
           </div>
-          <TaskList />
+          <TaskList update={update} setUpdate={setUpdate} />
         </div>
         <p>@jancoweb</p>
       </div>
