@@ -5,6 +5,7 @@ import api from "../../services/api";
 export default function Signup() {
 
   const navigate = useNavigate();
+  const [error, setError] = useState('')
 
   const [form, setForm] = useState({
     name: '',
@@ -31,7 +32,7 @@ export default function Signup() {
       navigate('/');
 
     } catch (error) {
-
+      setError('Email já cadastrado')
     }
   }
 
@@ -52,6 +53,7 @@ export default function Signup() {
               <div className="input_container">
                 <input type='password' placeholder="Digite sua senha" name="password" required value={form.password} onChange={(e) => changeValue(e.target)} />
               </div>
+              {error && <span style={{ color: 'red' }}>{error}</span>}
               <button type='submit' className="signupBtn">Cadastre-se</button>
               <Link to={'/'}><button className="back">Voltar</button></Link>
             </form>

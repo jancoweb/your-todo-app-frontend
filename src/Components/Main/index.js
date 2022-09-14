@@ -3,6 +3,7 @@ import { clearLocalItems, getLocalItem } from "../../services/functions";
 import TaskList from "../Tasks/TaskList";
 import { useNavigate } from 'react-router-dom'
 import api from "../../services/api";
+import logOutIcon from "../../assets/log-out.png"
 
 export default function Main() {
 
@@ -45,7 +46,7 @@ export default function Main() {
         <div className='content_wrapper'>
           <div className='logout'>
             <p>{getLocalItem('user')}</p>
-            <button className='logout' onClick={handleLogout}>Logout</button>
+            <button className='logout' onClick={handleLogout}><img src={logOutIcon} alt='logout' /></button>
           </div>
           <div className='title_container'>
             <h1>Lista de tarefas</h1>

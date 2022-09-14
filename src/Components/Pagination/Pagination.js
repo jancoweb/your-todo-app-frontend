@@ -10,7 +10,7 @@ const Pagination = ({ taskPerPage, totalTasks, paginate }) => {
   return (
     <ul className="page-list">
       {
-        pageNumbers.map((number) => {
+        totalTasks > 6 && pageNumbers.map((number) => {
           return (
             <li className="page-list-item" key={number}>
               <button onClick={() => paginate(number)}>{number}</button>
