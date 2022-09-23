@@ -30,10 +30,10 @@ const Task = ({ tasks, setUpdate }) => {
           authorization: `Bearer ${token}`
         }
       })
+      setUpdate(true)
     } catch (error) {
 
     }
-    setUpdate(true)
   }
 
   return <ul>
