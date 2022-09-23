@@ -33,6 +33,7 @@ const Task = ({ tasks, setUpdate }) => {
     } catch (error) {
 
     }
+    setUpdate(true)
   }
 
   return <ul>
