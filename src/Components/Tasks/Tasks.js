@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import api from "../../services/api";
 import { getLocalItem } from "../../services/functions";
 import deleteIcon from "../../assets/delete-icon.svg"
@@ -33,6 +33,9 @@ const Task = ({ tasks, setUpdate }) => {
     } catch (error) {
 
     }
+    useEffect(() => {
+      return
+    }, [])
   }
 
   return <ul>
