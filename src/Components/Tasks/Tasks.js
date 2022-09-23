@@ -33,9 +33,6 @@ const Task = ({ tasks, setUpdate }) => {
     } catch (error) {
 
     }
-    useEffect(() => {
-      return
-    }, [])
   }
 
   return <ul>
