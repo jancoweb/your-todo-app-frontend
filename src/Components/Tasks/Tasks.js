@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import api from "../../services/api";
 import { getLocalItem } from "../../services/functions";
 import deleteIcon from "../../assets/delete-icon.svg"
